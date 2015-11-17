@@ -109,9 +109,4 @@ public class AuctionServiceTest {
         auctionService.bid("A", new BigDecimal("1.00"));
     }
 
-    @Test(expected = AuctionClosedException.class)
-    public void closingAnAlreadyClosedAuction(){
-        auctionService.close();
-        auctionService.close();
-    }
 }

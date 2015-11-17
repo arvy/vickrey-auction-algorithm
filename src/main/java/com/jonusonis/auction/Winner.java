@@ -27,4 +27,19 @@ public class Winner {
     public String getName() {
         return name;
     }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode() * price.hashCode() * bid.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if( obj instanceof Winner ){
+            return name.equals(((Winner) obj).getName())
+                    && price.equals(((Winner) obj).getPrice())
+                    && bid.equals(((Winner) obj).getBid());
+        }
+        return super.equals(obj);
+    }
 }
