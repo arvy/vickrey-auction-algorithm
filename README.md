@@ -5,5 +5,6 @@
 - Java 7
 
 ##Running tests
-
-    ./gradlew test
+```
+./gradlew test
+```
